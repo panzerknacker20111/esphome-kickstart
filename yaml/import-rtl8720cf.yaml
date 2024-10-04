@@ -1,0 +1,19 @@
+esphome:
+  name: kickstart-rtl8720cf-2mb-788k
+
+rtl87xx:
+  board: generic-rtl8720cf-2mb-788k
+
+logger:
+web_server:
+captive_portal:
+mdns:
+api:
+ota:
+  - platform: esphome
+    password: !secret ota_password
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  ap:

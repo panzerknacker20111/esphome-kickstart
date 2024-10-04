@@ -1,0 +1,35 @@
+substitutions:
+  name: kickstart-rtl8720cf
+  import_url: github://libretiny-eu/esphome-kickstart/yaml/import-rtl8720cf.yaml@master
+
+packages:
+  base: !include kickstart-base.yaml
+
+rtl87xx:
+  board: generic-rtl8720cf-2mb-788k
+  framework:
+    version: latest
+    loglevel: debug
+
+select:
+  - platform: template
+    id: !extend pin
+    options:
+      - Select PIN
+      - PA00 / PWM2
+      - PA05 / PWM4
+      - PA06 / FCS
+      - PA07 / FD1
+      - PA08 / FD2
+      - PA09 / FD0
+      - PA10 / FSCK
+      - PA11 / FD3
+      - PA12 / PWM3
+      - PA14 / PWM0 / SWCLK
+      - PA15 / PWM1 / SWDIO
+      - PA18 / UART0_RX / I2C1_SCL / SPI0_SCK / SPI1_SCK
+      - PA19 / UART0_CTS / I2C0_SDA / SPI0_CS / SPI1_CS
+      - PA22 / UART0_RTS / I2C0_SCL / SPI0_MISO / SPI1_MISO / PWM5
+      - PA23 / UART0_TX / I2C1_SDA / SPI0_MISO / SPI1_MISO / PWM0
+      - PA29 / UART2_RX / I2C0_SCL / PWM4
+      - PA30 / UART2_TX / I2C0_SDA / PWM4
