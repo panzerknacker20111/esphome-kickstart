@@ -50,6 +50,29 @@ static const int PIN_MAP[] = {
     PIN_PA30,  // PA30 / UART2_TX / I2C0_SDA / PWM4
 
 };
+#elif defined(LT_RTL8720C)
+static const int PIN_MAP[] = {
+	PIN_PA00,  //
+	PIN_PA01,  //
+	PIN_PA02,  //
+	PIN_PA03,  //
+	PIN_PA04,  //
+	PIN_PA07,  //
+	PIN_PA08,  //
+	PIN_PA09,  //
+	PIN_PA10,  //
+	PIN_PA11,  //
+	PIN_PA12,  //
+	PIN_PA13,  //
+	PIN_PA14,  //
+	PIN_PA15,  //
+	PIN_PA16,  //
+	PIN_PA17,  //
+	PIN_PA18,  //
+	PIN_PA19,  //
+	PIN_PA20,  //
+	PIN_PA23,  //
+};
 #elif defined(USE_ESP8266)
 static const int PIN_MAP[] = {
     0,    // GPIO0

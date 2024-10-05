@@ -27,20 +27,21 @@ logger:
     text_sensor: ERROR
 
 ota:
+  - platform: esphome
 
 wifi:
   ap:
     ssid: $name
 
-captive_portal:
+#captive_portal:
 
 mdns:
 
 api:
   reboot_timeout: 0s
 
-web_server:
-  local: true
+#web_server:
+ # local: true
 
 pinscan:
   id: scanner
