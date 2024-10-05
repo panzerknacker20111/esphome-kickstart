@@ -5,8 +5,8 @@ rtl87xx:
   board: generic-rtl8720cf-2mb-992k
 
 logger:
-#web_server:
-#captive_portal:
+web_server:
+captive_portal:
 mdns:
 api:
   encryption:
