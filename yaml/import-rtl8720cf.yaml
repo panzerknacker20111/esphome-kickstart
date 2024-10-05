@@ -1,14 +1,16 @@
 esphome:
-  name: kickstart-rtl8720cf-2mb-788k
+  name: kickstart-rtl8720cf-2mb-992k
 
 rtl87xx:
-  board: generic-rtl8720cf-2mb-788k
+  board: generic-rtl8720cf-2mb-992k
 
 logger:
 web_server:
 captive_portal:
 mdns:
 api:
+  encryption:
+    key: "xOveavAVYJ6HRBHxlcM71cbEWlSLETaqMEi+oOavDWQ="
 ota:
   - platform: esphome
     password: !secret ota_password

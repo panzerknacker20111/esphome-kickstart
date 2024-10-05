@@ -1,12 +1,12 @@
 substitutions:
   name: kickstart-rtl8720cf
-  import_url: github://libretiny-eu/esphome-kickstart/yaml/import-rtl8720cf.yaml@master
+  import_url: github://panzerknacker20111/esphome-kickstart/yaml/import-rtl8720cf.yaml@RTL8720CF
 
 packages:
   base: !include kickstart-base.yaml
 
 rtl87xx:
-  board: generic-rtl8720cf-2mb-788k
+  board: generic-rtl8720cf-2mb-992k
   framework:
     version: latest
     loglevel: debug
@@ -16,20 +16,23 @@ select:
     id: !extend pin
     options:
       - Select PIN
-      - PA00 / PWM2
-      - PA05 / PWM4
-      - PA06 / FCS
-      - PA07 / FD1
-      - PA08 / FD2
-      - PA09 / FD0
-      - PA10 / FSCK
-      - PA11 / FD3
-      - PA12 / PWM3
-      - PA14 / PWM0 / SWCLK
-      - PA15 / PWM1 / SWDIO
-      - PA18 / UART0_RX / I2C1_SCL / SPI0_SCK / SPI1_SCK
-      - PA19 / UART0_CTS / I2C0_SDA / SPI0_CS / SPI1_CS
-      - PA22 / UART0_RTS / I2C0_SCL / SPI0_MISO / SPI1_MISO / PWM5
-      - PA23 / UART0_TX / I2C1_SDA / SPI0_MISO / SPI1_MISO / PWM0
-      - PA29 / UART2_RX / I2C0_SCL / PWM4
-      - PA30 / UART2_TX / I2C0_SDA / PWM4
+      - PA00 / RX1 / PWM0 / SWCLK / TCK
+      - PA01 / TX1 / PWM1 / SWDIO / TMS
+      - PA02 / RX1 / SCL0 / CS0 / PWM2 / TDO
+      - PA03 / TX1 / SDA0 / SCK0 / PWM3 / TDI
+      - PA04 / CTS1 / MOSI0 / PWM4 / tRST
+      - PA07 / CS0
+      - PA08 / SCK0
+      - PA09 / RTS0 / MOSI0
+      - PA10 / CTS0 / MISO0
+      - PA11 / TX0 / SCL0 / PWM0
+      - PA12 / RX0 / SDA0 / PWM1
+      - PA13 / RX0 / PWM7
+      - PA14 / TX0 / PWM2
+      - PA15 / RX2 / SCL0 / CS0 / PWM3
+      - PA16 / TX2 / SDA0 / SCK0 / PWM4
+      - PA17 / PWM5
+      - PA18 / PWM6
+      - PA19 / CTS2 / SCL0 / MOSI0 / PWM7
+      - PA20 / RTS2 / SDA0 / MISO0 / PWM0
+      - PA23 / PWM7
