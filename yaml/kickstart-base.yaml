@@ -41,7 +41,6 @@ api:
   reboot_timeout: 0s
 
 web_server:
-    local: true
 
 pinscan:
   id: scanner
